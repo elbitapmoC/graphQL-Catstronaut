@@ -1,8 +1,8 @@
-const { gql } = require("apollo-server");
+const { gql } = require('apollo-server');
 
 const typeDefs = gql`
   type Query {
-    "Get tracks array for homepage grid"
+    "Query to get tracks array for the homepage grid"
     tracksForHome: [Track!]!
   }
 
@@ -11,9 +11,9 @@ const typeDefs = gql`
     id: ID!
     "The track's title"
     title: String!
-    "The track's main author"
+    "The track's main Author"
     author: Author!
-    "The track's main illustration to display in track card or track page detail"
+    "The track's illustration to display in track card or track page detail"
     thumbnail: String
     "The track's approximate length to complete, in minutes"
     length: Int
@@ -21,12 +21,12 @@ const typeDefs = gql`
     modulesCount: Int
   }
 
-  "Author of a complete Track"
+  "Author of a complete Track or a Module"
   type Author {
     id: ID!
     "Author's first and last name"
     name: String!
-    "Author's profile picture url"
+    "Author's profile picture"
     photo: String
   }
 `;
